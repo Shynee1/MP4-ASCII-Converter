@@ -39,8 +39,9 @@ public class FrameRenderer {
 
                     Imgproc.cvtColor(frame, frame, Imgproc.COLOR_BGR2GRAY);
                     Mat resizedFrame = new Mat();
+                    double scaleFactor = screenHeight/frame.size().height/6;
                     //Resize image to make it fullscreen
-                    Imgproc.resize(frame, resizedFrame, new Size(), screenWidth / frame.size().width / 6, screenHeight / frame.size().height / 6, Imgproc.INTER_LINEAR);
+                    Imgproc.resize(frame, resizedFrame, new Size(), scaleFactor, scaleFactor, Imgproc.INTER_LINEAR);
 
                     frameList.add(getASCII(resizedFrame));
                     framesRendered++;
@@ -75,6 +76,8 @@ public class FrameRenderer {
         }
         return finalDisplay.toString();
     }
+
+
 }
 
 
