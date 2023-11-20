@@ -1,3 +1,5 @@
+package com.shynee;
+
 import org.opencv.core.Core;
 
 import java.awt.*;

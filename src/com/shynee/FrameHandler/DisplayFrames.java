@@ -1,4 +1,4 @@
-package FrameHandler;
+package com.shynee.FrameHandler;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,7 +15,7 @@ public class DisplayFrames extends JPanel {
     String currentFrame;
     JFrame parentFrame;
 
-    DisplayFrames(List<String> frames, int screenWidth, int screenHeight, JFrame parentFrame) {
+    public DisplayFrames(List<String> frames, int screenWidth, int screenHeight, JFrame parentFrame) {
         this.setSize(new Dimension(screenWidth, screenHeight));
         this.frames = frames;
         this.parentFrame = parentFrame;
