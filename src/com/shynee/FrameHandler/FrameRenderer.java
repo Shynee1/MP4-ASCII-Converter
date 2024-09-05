@@ -12,7 +12,7 @@ import java.util.List;
 
 public class FrameRenderer implements Runnable{
 
-    public final double totalFrames;
+    public final int totalFrames;
     public int framesRendered = 0;
     public List<String> frameList = new ArrayList<>();
 
@@ -24,7 +24,7 @@ public class FrameRenderer implements Runnable{
         this.screenHeight = screenHeight;
 
         capture = new VideoCapture(videoFile.getAbsolutePath());
-        totalFrames = capture.get(Videoio.CAP_PROP_FRAME_COUNT);
+        totalFrames = (int) capture.get(Videoio.CAP_PROP_FRAME_COUNT) - 1;
     }
 
     public void renderFrames(){

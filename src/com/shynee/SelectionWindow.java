@@ -1,6 +1,5 @@
 package com.shynee;
 
-import com.shynee.FrameHandler.DisplayFrames;
 import com.shynee.FrameHandler.FrameRenderer;
 import com.shynee.FrameHandler.Output;
 
